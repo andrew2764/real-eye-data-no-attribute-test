@@ -156,6 +156,20 @@
 
   </main>
 
+  <script type="module">
+
+    import EmbeddedPageSdk from "https://app.realeye.io/sdk/js/testRunnerEmbeddableSdk-1.3.js"
+    
+    window.addEventListener("DOMContentLoaded", () => {
+       const debugMode = false;
+       const stimulusId = null; // Or Stimulus/Item UUID from RealEye Study, e.g. "61560b76-3d31-4f0e-b530-55bd8709aadb"
+       const forceRun = false;
+    
+       const reSdk = new EmbeddedPageSdk(debugMode, stimulusId, forceRun)
+       window.reSdk = reSdk
+    });
+    
+    </script>
 
 </body>
 
